@@ -19,6 +19,7 @@
 - For OmniAuth callback controller tests, add a test-only route outside `/auth/*` to bypass middleware CSRF/state checks.
 - `client_id missing` from provider maps directly to missing `LEARN_CLIENT_ID` in the Rails process env.
 - Use `dotenv-rails` in `development,test` so `.env` values are loaded automatically for local OAuth credentials.
+- For frontend refresh tasks, keep OAuth forms unchanged and layer modern UI via CSS classes to avoid test regressions.
 
 ## Patterns That Don't Work
 - Making assumptions about OAuth endpoint paths without provider documentation.
