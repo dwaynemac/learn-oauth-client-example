@@ -18,6 +18,7 @@
 - For Rails 8 OAuth clients, `omniauth-oauth2` with a custom strategy is more reliable than legacy OIDC strategy gems.
 - For OmniAuth callback controller tests, add a test-only route outside `/auth/*` to bypass middleware CSRF/state checks.
 - `client_id missing` from provider maps directly to missing `LEARN_CLIENT_ID` in the Rails process env.
+- Use `dotenv-rails` in `development,test` so `.env` values are loaded automatically for local OAuth credentials.
 
 ## Patterns That Don't Work
 - Making assumptions about OAuth endpoint paths without provider documentation.
