@@ -18,7 +18,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "omniauth", "~> 2.1"
 gem "omniauth-oauth2", "~> 1.8"
-gem "omniauth-rails_csrf_protection", "~> 1.0"
+gem "omniauth-rails_csrf_protection", "~> 2.0"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
