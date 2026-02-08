@@ -28,3 +28,4 @@
 # Ignore editor and OS files
 .DS_Store
 .idea/
+/.output.txt
