@@ -10,7 +10,7 @@ end
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :learn,
-    scope: "openid email profile",
+    scope: "openid email profile accounts",
     client_id: ENV.fetch("LEARN_CLIENT_ID", ""),
     client_secret: ENV.fetch("LEARN_CLIENT_SECRET", ""),
     client_options: {
