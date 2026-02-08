@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     info = auth.fetch("info", {})
     session[:learn_uid] = auth["uid"]
-    session[:learn_user] = info.slice("email", "name", "first_name", "last_name", "image")
+    session[:learn_user] = info.slice("email", "name", "first_name", "last_name", "image", "enabled_accounts")
     session[:learn_token] = auth.dig("credentials", "token")
 
     redirect_to root_path, notice: "Signed in with LEARN."
