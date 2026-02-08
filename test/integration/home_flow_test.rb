@@ -108,6 +108,30 @@ class HomeFlowTest < ActionDispatch::IntegrationTest
     assert_includes response.body, "fallback_account"
   end
 
+  test "callback stores level and level_name" do
+    auth = OmniAuth::AuthHash.new(
+      provider: "learn",
+      uid: "42",
+      info: {
+        name: "Test User",
+        email: "test@example.com",
+        level: 5,
+        level_name: "Advanced"
+      },
+      credentials: {
+        token: "access-token-123"
+      }
+    )
+
+    post "/test/auth/learn/callback", env: { "omniauth.auth" => auth }
+
+    assert_redirected_to root_path
+    follow_redirect!
+    assert_response :success
+    assert_includes response.body, "5"
+    assert_includes response.body, "Advanced"
+  end
+
   test "failure redirects to root with alert" do
     get "/auth/failure", params: {message: "invalid_grant"}
 

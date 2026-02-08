@@ -14,7 +14,9 @@ module OmniAuth
           first_name: raw_info["given_name"],
           last_name: raw_info["family_name"],
           image: raw_info["picture"],
-          enabled_accounts: raw_info["enabled_accounts"] || raw_info["accounts"]
+          enabled_accounts: raw_info["enabled_accounts"] || raw_info["accounts"],
+          level: raw_info["level"],
+          level_name: raw_info["level_name"]
         }
       end
 

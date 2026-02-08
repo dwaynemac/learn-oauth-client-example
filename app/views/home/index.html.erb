@@ -60,6 +60,14 @@
           <p class="kv-label">Enabled accounts</p>
           <p class="kv-value"><%= Array(@learn_user["enabled_accounts"]).join(", ").presence || "n/a" %></p>
         </article>
+        <article class="kv-card">
+          <p class="kv-label">Level</p>
+          <p class="kv-value"><%= @learn_user["level"] || "n/a" %></p>
+        </article>
+        <article class="kv-card">
+          <p class="kv-label">Level Name</p>
+          <p class="kv-value"><%= @learn_user["level_name"] || "n/a" %></p>
+        </article>
       </div>
     <% else %>
       <p class="body-copy">
