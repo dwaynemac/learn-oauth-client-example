@@ -8,11 +8,13 @@
 | 2026-02-07 | self | `omniauth-openid-connect` resolved to a legacy version incompatible with Rails 8 | Use `omniauth-oauth2` + custom strategy for LEARN on Rails 8 |
 | 2026-02-07 | self | `minitest` auto-resolved to 6.x and broke Rails test runner | Pin `minitest` to a 5.x version in Rails 8 apps when resolver picks 6.x |
 | 2026-02-07 | self | `git rm --cached` failed in sandbox due `.git/index.lock` permission | Retry git index-writing commands with escalated permissions when sandbox blocks `.git` writes |
+| 2026-02-08 | user | Local LEARN issuer was left at `http://localhost:3031` | Default and examples should use `https://learn.derose.app` unless explicitly requested otherwise |
 
 ## User Preferences
 - Prefer Ruby over Python.
 - Ruby style should follow `standard-rails`.
 - Comments should be in Spanish when helpful.
+- Prefer `https://learn.derose.app` for LEARN issuer values instead of localhost defaults.
 
 ## Patterns That Work
 - Start by reading provider docs before scaffolding OAuth flows.

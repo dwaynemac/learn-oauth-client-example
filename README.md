@@ -15,8 +15,7 @@ Provider reference used:
 
 This app uses OmniAuth OAuth2 with LEARN endpoints and these defaults:
 
-- Development issuer: `http://localhost:3031`
-- Non-development issuer: `https://learn.derose.app`
+- Issuer: `https://learn.derose.app`
 - Callback path: `/auth/learn/callback`
 - Default development callback URL:
   `http://localhost:3000/auth/learn/callback`
@@ -36,11 +35,11 @@ cp .env.example .env
 ```bash
 LEARN_CLIENT_ID=your-client-id
 LEARN_CLIENT_SECRET=your-client-secret
-LEARN_SITE=http://localhost:3031
+LEARN_SITE=https://learn.derose.app
 LEARN_REDIRECT_URI=http://localhost:3000/auth/learn/callback
 ```
 
-`LEARN_SITE` defaults to `http://localhost:3031` in development if omitted.
+`LEARN_SITE` defaults to `https://learn.derose.app` if omitted.
 
 ## Register OAuth Application in LEARN
 

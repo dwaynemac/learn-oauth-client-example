@@ -1,10 +1,6 @@
 require Rails.root.join("lib/omniauth/strategies/learn")
 
-default_learn_site = if Rails.env.development?
-  "http://localhost:3031"
-else
-  "https://learn.derose.app"
-end
+default_learn_site = "https://learn.derose.app"
 
 default_redirect_uri = if Rails.env.development?
   "http://localhost:3000/auth/learn/callback"
