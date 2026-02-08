@@ -35,11 +35,16 @@ cp .env.example .env
 ```bash
 LEARN_CLIENT_ID=your-client-id
 LEARN_CLIENT_SECRET=your-client-secret
-LEARN_SITE=https://learn.derose.app
+oauth_provider_env=production
 LEARN_REDIRECT_URI=http://localhost:3000/auth/learn/callback
 ```
 
-`LEARN_SITE` defaults to `https://learn.derose.app` if omitted.
+`oauth_provider_env` supports:
+- `development` -> `http://localhost:3031`
+- `production` -> `https://learn.derose.app`
+
+`production` is the default when omitted.  
+You can still set `LEARN_SITE` explicitly to override both.
 
 ## Register OAuth Application in LEARN
 
