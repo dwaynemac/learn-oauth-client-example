@@ -4,7 +4,7 @@ Rails 8 sample client that authenticates users against the LEARN OAuth 2.0 /
 OpenID Connect provider using Authorization Code + PKCE.
 
 Provider reference used:
-`/Users/dwaynemac/GitHub/escuelaonline/docs/oauth_provider.md`
+`oauth_provider.md` (source documentation file provided locally)
 
 ## Ruby / Rails
 

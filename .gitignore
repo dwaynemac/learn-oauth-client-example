@@ -5,6 +5,7 @@
 /.env
 /.env.*
 !/.env.example
+/config/master.key
 
 # Ignore all logfiles and tempfiles
 /log/*
